@@ -33,11 +33,11 @@ A text unit that can be analysed
 
 
 `@script`
-To start with, let us refresh what a token is, so that we can better understand the process of tokenization. A token is a text unit that can be analysed. This is usually a word, but can also be a phrase
+To start with, let us refresh what a token is, so that we can better understand the process of tokenization. A token is a text unit that can be analysed. This is usually a word, but can also be a phrase or other units of language.
 
 
 ---
-## How does tidytext implement tokenization?
+## Tokenization in Tidyverse?
 
 ```yaml
 type: "FullSlide"
@@ -56,7 +56,65 @@ Wickham, H, Journal of Statistical Software, August 2014
 
 
 `@script`
-Tidytext is based on the following principles: Each variable is a column, each observation is a row and each type of observational unit is a table.
+So given what we know, how would tokenization be implemented in tidyverse? In the 2014 paper, Hadley Wickham described Tidy data is based on the following principles: Each variable is a column, each observation is a row and each type of observational unit is a table. So we can expect that tokenized text will conform to this when implemented in tidyverse...
+
+
+---
+## The unnest_tokens() function
+
+```yaml
+type: "TwoRows"
+key: "7a0a5314b3"
+disable_transition: false
+```
+
+`@part1`
+```
+treasure_island <- gutenberg_download(c(120))
+treasure_island 
+		%>% unnest_tokens(tokens, text, token = "words") 
+		%>% count(tokens, sort = TRUE)
+```
+
+
+`@part2`
+Insert image here of the table distribution showing stop words
+
+
+`@script`
+Let us have a look at the tokens that come out of the book Treasure Island by Robery Louis Stephenson.
+
+
+---
+## What does unnest_tokens() do?
+
+```yaml
+type: "FullSlide"
+key: "8a81a6d5f2"
+```
+
+`@part1`
+
+
+
+`@script`
+
+
+
+---
+## Options and problems for the tokenizer?
+
+```yaml
+type: "FullSlide"
+key: "a188af3d9f"
+```
+
+`@part1`
+
+
+
+`@script`
+Unit for tokenizing, or a custom tokenizing function. Built-in options are "words" (default), "characters", "character_shingles", "ngrams", "skip_ngrams", "sentences", "lines", "paragraphs", "regex", "tweets" (tokenization by word that preserves usernames, hashtags, and URLS ), and "ptb" (Penn Treebank). If a function, should take a character vector and return a list of character vectors of the same length.
 
 
 ---
@@ -68,5 +126,5 @@ key: "598027f497"
 ```
 
 `@script`
-
+It is time to put this into practice- let's try out some tokenization!
 
