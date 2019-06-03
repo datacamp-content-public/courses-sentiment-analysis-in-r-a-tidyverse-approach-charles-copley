@@ -104,7 +104,16 @@ key: "8a81a6d5f2"
 ```
 
 `@part1`
+So... what does unnest_tokens() actually do?
 
+```
+treasure_island 
+	%>% unnest_tokens(tokens, text, token = 'words')
+```
+
+
+`@citations`
+![](https://assets.datacamp.com/production/repositories/5077/datasets/88b7db9de3aa2e4bf27b8b7ed10fa1dfc55f4585/tokens_r.png = 20)
 
 
 `@script`
