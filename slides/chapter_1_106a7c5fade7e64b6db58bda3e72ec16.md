@@ -83,11 +83,11 @@ treasure_island
 
 
 `@part2`
-![](https://assets.datacamp.com/production/repositories/5077/datasets/8596c9af0158d35d5e829132d41b9df57ede7eb4/wordcloud.png)
+![](https://assets.datacamp.com/production/repositories/5077/datasets/2c5a3ad0308ce02b917066cf0ee7991071f29895/wordcloud.png = 25)
 
 
 `@script`
-Let us have a look at the tokens that come out of the book Treasure Island by Robery Louis Stephenson. Here we have visualised the words directly from the book in a wordcloud where the size of a word depicts how many times it occurs in the book. You can see from this that there is a problem- there are a large number of occurrences
+Let us have a look at the tokens that come out of the book Treasure Island by Robert Louis Stephenson. Here we have visualised the words directly from the book in a wordcloud where the size of a word depicts how many times it occurs in the book. You can see from this that there is a problem- there are a large number of occurrences of uninteresting words- we call these stopwords and we will be dealing with those in a subsequent lesson.
 
 
 ---
