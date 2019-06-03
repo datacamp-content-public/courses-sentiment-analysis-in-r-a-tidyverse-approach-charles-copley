@@ -90,7 +90,9 @@ treasure_island %>% unnest_tokens(tokens, text, token = 'words')
 
 
 `@script`
-Let us have a look at the tokens that come out of the book Treasure Island by Robert Louis Stephenson. Here we have visualised the words directly from the book in a wordcloud where the size of a word depicts how many times it occurs in the book. You can see from this that there is a problem- there are a large number of occurrences of uninteresting words- we call these stopwords and we will be dealing with those in a subsequent lesson.
+Let us have a look at the tokens that come out of the book Treasure Island. Here we have visualised the words directly from the book in a wordcloud where the size of a word depicts how many times it occurs in the book. 
+
+You can see from this that there is a problem- there are a large number of occurrences of uninteresting words- we call these stopwords and we will be dealing with those in a subsequent lesson.
 
 
 ---
