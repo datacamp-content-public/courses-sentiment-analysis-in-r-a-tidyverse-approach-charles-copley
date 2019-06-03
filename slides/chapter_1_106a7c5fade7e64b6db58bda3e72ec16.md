@@ -83,7 +83,7 @@ treasure_island
 
 
 `@part2`
-![https://assets.datacamp.com/production/repositories/5077/datasets/8596c9af0158d35d5e829132d41b9df57ede7eb4/wordcloud.png]()
+![](https://assets.datacamp.com/production/repositories/5077/datasets/8596c9af0158d35d5e829132d41b9df57ede7eb4/wordcloud.png)
 
 
 `@script`
