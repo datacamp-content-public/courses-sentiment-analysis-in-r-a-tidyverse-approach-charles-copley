@@ -72,13 +72,14 @@ disable_transition: false
 ```
 treasure_island <- gutenberg_download(c(120))
 treasure_island 
-		%>% unnest_tokens(tokens, text, token = "words") 
-		%>% count(tokens, sort = TRUE)
+	%>% unnest_tokens(tokens, text, token = 'words')  
+    %>% count(tokens) 
+    %>% with(wordcloud(tokens, n, max.words =100, 	 	colors=pal_col))  
 ```
 
 
 `@part2`
-Insert image here of the table distribution showing stop words
+![https://assets.datacamp.com/production/repositories/5077/datasets/8596c9af0158d35d5e829132d41b9df57ede7eb4/wordcloud.png]()
 
 
 `@script`
