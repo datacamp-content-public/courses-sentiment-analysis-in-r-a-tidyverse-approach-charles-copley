@@ -52,6 +52,11 @@ Reminder of what Tidy Data should look like:
 - Each variable forms a column
 - Each observation forms a row
 - Each type of observation forms a table
+ 
+Let us start with the book _Treasure Island_ by Robert Louis Stevenson
+```
+treasure_island <- gutenberg_download(c(120))
+```
 
 
 `@citations`
@@ -59,7 +64,7 @@ Wickham, H, Journal of Statistical Software, August 2014
 
 
 `@script`
-So given what we know, how would tokenization be implemented in tidyverse? In the 2014 paper, Hadley Wickham described Tidy data is based on the following principles: Each variable is a column, each observation is a row and each type of observational unit is a table. So we can expect that tokenized text will conform to this when implemented in tidyverse...
+So given what we know, how would tokenization be implemented in tidyverse? In the 2014 paper, Hadley Wickham described Tidy data is based on the following principles: Each variable is a column, each observation is a row and each type of observational unit is a table. So we can expect that tokenized text will conform to this when implemented in tidyverse...To illustrate this we will be using the text from Treasure Island by Robert Louis Stevenson
 
 
 ---
