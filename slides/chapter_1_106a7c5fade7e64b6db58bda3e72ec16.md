@@ -40,7 +40,7 @@ To start with, let us refresh what a token is, so that we can better understand 
 
 
 ---
-## Tokenization in Tidyverse?
+## Tidyverse tokenization?
 
 ```yaml
 type: "FullSlide"
@@ -111,17 +111,16 @@ treasure_island
 	%>% unnest_tokens(tokens, text, token = 'words')
 ```
 
-
-`@citations`
-![](https://assets.datacamp.com/production/repositories/5077/datasets/88b7db9de3aa2e4bf27b8b7ed10fa1dfc55f4585/tokens_r.png = 20)
+![](https://assets.datacamp.com/production/repositories/5077/datasets/88b7db9de3aa2e4bf27b8b7ed10fa1dfc55f4585/tokens_r.png = 50)
 
 
 `@script`
-
+In tidy text we expect that each variable should be a column and each observation a row. For the tokenizer we then expect that each row should represented a token, looking at the output table this is what we see together with the gutenberg_id identifier of the book on Project Gutenberg.
 
 
 ---
-## Options and problems for the tokenizer?
+## Options for the tokenizer?
+
 
 ```yaml
 type: "FullSlide"
@@ -129,7 +128,14 @@ key: "a188af3d9f"
 ```
 
 `@part1`
-
+```
+treasure_island 
+  %>% unnest_tokens(tokens, text, token = 'ngrams',n = 2)
+  %>% count(tokens) 
+  %>% with(wordcloud(tokens, n, max.words = 100,
+      colors=pal_col)) 
+```
+![](https://assets.datacamp.com/production/repositories/5077/datasets/398a6bd3e1a47c897cb17cedff611b7f46428ec2/datacamp%20wordclouds.png = 35)
 
 
 `@script`
