@@ -3,7 +3,7 @@ title: Insert title here
 key: 106a7c5fade7e64b6db58bda3e72ec16
 
 ---
-## Title Slide
+## Lesson  2.1 Pre-processing: Tokenization
 
 ```yaml
 type: "TitleSlide"
@@ -17,7 +17,7 @@ title: Head of Data Science
 
 
 `@script`
-Previously we learned a little about sentiment analysis, and how it fits well with the tidyverse way of implementing data processing pipelines. In this video we will be teaching you about the very first step in a standard natural language processing pipeline: tokenization
+Previously we learned about sentiment analysis, and specifically how it fits well with the tidyverse way of implementing data processing pipelines. In this video we will be teaching you about the very first step in a standard natural language processing pipeline: tokenization
 
 
 ---
@@ -29,14 +29,14 @@ key: "1d28895992"
 ```
 
 `@part1`
-A _unit_ of text that can be analysed
+A _unit_ after breaking up text into pieces
 1. Words
 2. Phrases
 3. Sentences
 
 
 `@script`
-To start with, let us refresh what a token is, so that we can better understand the process of tokenization. A token is a text unit that can be analysed. This is usually a word, but can also be a phrase or other units of language.
+To start with, let us refresh what a token is, so that we can better understand the process of tokenization. A token is what you get after breaking up a piece of text into smaller pieces, and usually involves discarding punctuation The smaller piecse are usually words, but can also be other units of language such as phrases or sentences. We will see how this concept is useful through the rest of this Course
 
 
 ---
@@ -64,7 +64,7 @@ Wickham, H, Journal of Statistical Software, August 2014
 
 
 `@script`
-So given what we know, how would tokenization be implemented in tidyverse? In the 2014 paper, Hadley Wickham described Tidy data is based on the following principles: Each variable is a column, each observation is a row and each type of observational unit is a table. So we can expect that tokenized text will conform to this when implemented in tidyverse...To illustrate this we will be using the text from Treasure Island by Robert Louis Stevenson
+Ok, so we understand tokenization... But how would tokenization be implemented in tidyverse? In the 2014 paper, Hadley Wickham described Tidy data is based on the following principles: Each variable is a column, each observation is a row and each type of observational unit is a table. So we can expect that tokenized text will conform to this when implemented in tidyverse...To illustrate this we will be using the text from Treasure Island by Robert Louis Stevenson
 
 
 ---
@@ -90,7 +90,9 @@ treasure_island %>% unnest_tokens(tokens, text, token = 'words')
 
 
 `@script`
-Let us have a look at the tokens that come out of the book Treasure Island. Here we have visualised the words directly from the book in a wordcloud where the size of a word depicts how many times it occurs in the book. 
+In R tidytext, tokenization is carried out by the unnest_tokens() function. 
+
+Running the code below uses this function and pipes the output into the count() function and finishes with a wordcloud depiction of the word counts in the book. The size of a word depicts the relative frequency of occurrence of the word in the book 
 
 You can see from this that there is a problem- there are a large number of occurrences of uninteresting words- we call these stopwords and we will be dealing with those in a subsequent lesson.
 
@@ -121,7 +123,6 @@ In tidy text we expect that each variable should be a column and each observatio
 ---
 ## Options for the tokenizer?
 
-
 ```yaml
 type: "FullSlide"
 key: "a188af3d9f"
@@ -139,7 +140,10 @@ treasure_island
 
 
 `@script`
-Unit for tokenizing, or a custom tokenizing function. Built-in options are "words" (default), "characters", "character_shingles", "ngrams", "skip_ngrams", "sentences", "lines", "paragraphs", "regex", "tweets" (tokenization by word that preserves usernames, hashtags, and URLS ), and "ptb" (Penn Treebank). If a function, should take a character vector and return a list of character vectors of the same length.
+We mentioned earlier that tokens can be different 'pieces' of text like words, sentences, phrases and other sections. The unnest_token() function gives the following options:
+"words" (default), "characters", "character_shingles", "ngrams", "skip_ngrams", "sentences", "lines", "paragraphs", "regex",and even "tweets"! 
+
+In the above example we have used n-grams with n=2 to show how two-word combinations exist in the Treasure Island example...
 
 
 ---

@@ -44,7 +44,7 @@ This is an example exercise.
 
 ---
 
-## Insert exercise title here
+## Lesson  2.1 Pre-processing: Tokenization
 
 ```yaml
 type: VideoExercise
