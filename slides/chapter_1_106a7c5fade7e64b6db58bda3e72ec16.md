@@ -74,7 +74,8 @@ treasure_island <- gutenberg_download(c(120))
 treasure_island 
 	%>% unnest_tokens(tokens, text, token = 'words')  
     %>% count(tokens) 
-    %>% with(wordcloud(tokens, n, max.words =100, 	 	colors=pal_col))  
+    %>% with(wordcloud(tokens, n, max.words =100,
+    colors=pal_col))  
 ```
 
 
@@ -83,7 +84,7 @@ treasure_island
 
 
 `@script`
-Let us have a look at the tokens that come out of the book Treasure Island by Robery Louis Stephenson.
+Let us have a look at the tokens that come out of the book Treasure Island by Robery Louis Stephenson. Here we have visualised the words directly from the book in a wordcloud where the size of a word depicts how many times it occurs in the book. You can see from this that there is a problem- there are a large number of occurrences
 
 
 ---
