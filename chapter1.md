@@ -1,5 +1,5 @@
 ---
-title: 'Chapter Title Here'
+title: 'A Reusable Pipeline for sentiment analysis'
 description: 'Chapter description goes here.'
 free_preview: true
 ---
