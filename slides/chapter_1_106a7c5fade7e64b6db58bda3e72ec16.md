@@ -29,7 +29,10 @@ key: "1d28895992"
 ```
 
 `@part1`
-A text unit that can be analysed
+A _unit_ of text that can be analysed
+1. Words
+2. Phrases
+3. Sentences
 
 
 `@script`
