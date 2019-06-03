@@ -73,17 +73,15 @@ disable_transition: false
 
 `@part1`
 ```
-treasure_island <- gutenberg_download(c(120))
-treasure_island 
-	%>% unnest_tokens(tokens, text, token = 'words')  
-    %>% count(tokens) 
+treasure_island %>% unnest_tokens(tokens, text, token = 'words')
+	%>% count(tokens) 
     %>% with(wordcloud(tokens, n, max.words =100,
     colors=pal_col))  
 ```
 
 
 `@part2`
-![](https://assets.datacamp.com/production/repositories/5077/datasets/2c5a3ad0308ce02b917066cf0ee7991071f29895/wordcloud.png = 25)
+![](https://assets.datacamp.com/production/repositories/5077/datasets/2c5a3ad0308ce02b917066cf0ee7991071f29895/wordcloud.png = 35)
 
 
 `@script`
